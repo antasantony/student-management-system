@@ -1,5 +1,7 @@
 # 🎓 Student Management System
 
+👉 Currently implementing student authentication and admin dashboard features.
+
 A full-stack student management system built using Node.js, Express, EJS, and MySQL.
 
 ---
