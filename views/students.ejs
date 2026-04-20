@@ -1,0 +1,11 @@
+<h2>All Students</h2>
+
+<ul>
+    <% students.forEach(student=> { %>
+        <li>
+            <%= student.name %> - <%= student.email %>
+                    <a href="/edit/<%= student.id %>">Edit</a>
+                    <a href="/delete/<%= student.id %>">Delete</a>
+        </li>
+        <% }) %>
+</ul>

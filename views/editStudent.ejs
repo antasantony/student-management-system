@@ -1,0 +1,8 @@
+<h2>Edit Student</h2>
+
+<form action="/edit/<%= student.id %>" method="POST">
+    <input type="text" name="name" value="<%= student.name %>" />
+    <input type="email" name="email" value="<%= student.email %>" />
+    <input type="password" name="password" value="<%= student.password %>" />
+    <button type="submit">Update</button>
+</form>
