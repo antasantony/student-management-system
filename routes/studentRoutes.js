@@ -27,7 +27,34 @@ router.post("/signup", (req, res) => {
     res.redirect("/students");
   });
 });
+//login page
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+router.post("/login", (req, res) => {
+  const { email, password } = req.body;
 
+  const sql = "SELECT * FROM students WHERE email = ? AND password = ?";
+
+  db.query(sql, [email, password], (err, results) => {
+    if (err) return res.send("Error");
+
+    if (results.length > 0) {
+      req.session.user = results[0]; 
+      res.redirect("/dashboard");
+    } else {
+      res.send("Invalid credentials");
+    }
+  });
+});
+//dash board
+router.get("/dashboard", (req, res) => {
+  if (!req.session.user) {
+    return res.redirect("/login");
+  }
+
+  res.render("dashboard", { user: req.session.user });
+});
 router.get("/students", (req, res) => {
   db.query("SELECT * FROM students", (err, result) => {
     if (err) {
@@ -69,6 +96,12 @@ router.post("/edit/:id", (req, res) => {
     if (err) return res.send("Error updating");
 
     res.redirect("/students");
+  });
+});
+//logout
+router.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/login");
   });
 });
 module.exports = router;
