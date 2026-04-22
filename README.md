@@ -1,41 +1,50 @@
 # 🎓 Student Management System
 
-👉 Currently implementing student authentication and admin dashboard features.
-
-A full-stack student management system built using Node.js, Express, EJS, and MySQL.
+A full-stack student management system built using Node.js, Express, EJS, MySQL, and TypeScript.
 
 ---
 
-## 🚀 Features (Current Progress)
+## 🚀 Features
 
-- Basic project setup completed
-- Node.js + Express server running
-- MySQL database connection setup
-- MVC folder structure created
-- GitHub repository initialized
+* Student signup and login system
+* Session-based authentication
+* Admin dashboard to manage students
+* CRUD operations (add, view, edit, delete students)
+* MVC architecture (routes, controllers, models)
+* MySQL database integration
+* TypeScript-based code structure (in progress)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Node.js
-- Express.js
-- EJS
-- MySQL
-- JavaScript
+* Node.js
+* Express.js
+* EJS
+* MySQL
+* TypeScript
 
 ---
 
-## 📌 Planned Features
+## 📂 Project Structure
 
-- Student signup and login system
-- Admin dashboard (add/edit/delete students)
-- Authentication system (session-based)
-- Student performance tracking module
-- Data validation and security improvements
+* `routes/` → handles application routes
+* `controllers/` → contains business logic
+* `models/` → handles database operations
+* `config/` → database configuration
+* `views/` → EJS templates
 
 ---
 
-## 📂 Project Status
+## 📌 Upcoming Improvements
 
-🚧 In development
+* Password hashing using bcrypt
+* Input validation and error handling
+* Role-based authentication (admin / student)
+* Student performance tracking module (analytics & charts)
+
+---
+
+## 📅 Project Status
+
+🚧 Actively in development (core features completed, enhancements in progress)
